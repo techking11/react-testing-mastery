@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import Button from './Button';
 import userEvent from '@testing-library/user-event';
 
@@ -15,6 +15,6 @@ describe('Button Component', () => {
 
     // Simulate click
     await userEvent.click(button);
-    expect(handleClick).toHaveBeenCalledTimes(1);
+    expect(handleClick).toHaveBeenTimes(1);
   });
 });
